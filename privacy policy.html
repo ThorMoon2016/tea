@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitality Health| Live Longer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/992b1432c1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                  <a href="index.html"><img src="images/chatime-healthtea-logo-design-by-songpe-removebg-preview.png" width="185px"></a>
+                </div>
+                <nav>
+                  <ul id="MenuItems" class="nav">
+                      <li><a href="index.html">Pocetna</a></li>
+                      <li><a href="PROIZVODI.html">Proizvodi</a></li>
+                      <li><a href="PROIZVODI.html">O nama</a></li>
+                      <li><a href="PROIZVODI.html">Kontakt</a></li>
+                  </ul>
+                </nav>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+           
+    
+
+            <div class="image-container">
+                <div class="image-caption">
+                  <p style="text-align: left;">Privacy Policy (Politika privatnosti):
+
+                    Dragi posjetitelji,
+                    
+                    Hvala Vam što ste posjetili našu stranicu i što vam je stalo do vaše privatnosti. Kao kompanija koja se bavi prodajom čajeva koji poboljšavaju zdravlje, mi cijenimo vašu povjerenje u nas. Ova politika privatnosti objašnjava kako prikupljamo, koristimo i štitimo vaše osobne podatke. Molimo vas da pažljivo pročitate ovu politiku kako biste razumjeli naše postupke u vezi s vašim podacima i kako ćemo postupati s vašim informacijama.
+                    
+                    Vaše podatke koristimo samo u svrhu obrade narudžbe i poboljšanja vašeg iskustva s našom stranicom. Vaši podaci neće biti dijeljeni, prodavani ili distribuirani trećim stranama bez vašeg izričitog pristanka.
+                    
+                    Ako imate bilo kakvih pitanja ili nedoumica u vezi s našom politikom privatnosti, slobodno nas kontaktirajte putem [e-mail adresa za kontakt].</p>
+                </div>
+
+
+   
+
+    <!---------- brands ------>
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="images/robot-removebg-preview.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/bingo-removebg-preview.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-coca-cola.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-paypal.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-philips.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/konzum-removebg-preview.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------- footer ------->
+    <footer>
+        <p50>&copy; 2023 Copyright. Sva prava zadržana.</p>
+            <a href="privacy_policy.html">Privacy Policy</a>
+            <a href="terms&conditions.html">Terms&Conditions</a>
+    </footer>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        var menuIcon = document.querySelector(".menu-icon");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+                menuIcon.classList.add("open"); // Dodajte klasu za otvoreni izbornik
+            } else {
+                MenuItems.style.maxHeight = "0px";
+                menuIcon.classList.remove("open"); // Uklonite klasu za zatvoreni izbornik
+            }
+        }
+    </script>
+</body>
+</html>

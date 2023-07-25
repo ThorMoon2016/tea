@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/992b1432c1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/chatime-healthtea-logo-design-by-songpe-removebg-preview.png" width="185px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Pocetna</a></li>
+                        <li><a href="">Proizvodi</a></li>
+                        <li><a href="">O nama</a></li>
+                        <li><a href="">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </div>
+    
+
+        <!------ featured products ------>
+    <div class="small-container">
+        <h2 class="title">Preporuceni proizvodi</h2>
+        <div class="row-5">
+            <div class="col-4">
+                <a href="pro1.html"><img src="images/c1.png"></a>
+                <a href="pro1.html"><h4>Arterioskleroza</h4></a>
+                <div class="rating2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p><b>39,99KM</b></p>
+            </div>
+            <div class="col-4">
+                <a href="pro2.html"><img src="images/c2.png"></a>
+                <a href="pro2.html"><h4>Poviseni holesterol</h4></a>
+                <div class="rating2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p><b>49,99KM</b></p>
+            </div>
+            <div class="col-4">
+                <a href="pro3.html"><img src="images/c3.png"></a>
+                <a href="pro3.html"><h4>Visoki pritisak</h4></a>
+                <div class="rating2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p><b>59,99KM</b></p>
+            </div>
+            <div class="col-4">
+                <a href="pro4.html"><img src="images/c4.png"></a>
+                <a href="pro4.html"><h4>Detox caj</h4></a>
+                <div class="rating2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p><b>69,99KM</b></p>
+            </div>
+        </div>
+    </div>
+
+   
+    <!-------- footer ------->
+
+    <!---------js for toggle menu------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+        // Skripta za sortiranje proizvoda
+        function sortirajProizvode(sortiranje) {
+            const kontejner = document.getElementById("productContainer");
+            const proizvodi = Array.from(kontejner.children);
+
+            proizvodi.sort((a, b) => {
+                const cijenaA = parseFloat(a.querySelector("p").textContent.slice(1));
+                const cijenaB = parseFloat(b.querySelector("p").textContent.slice(1));
+
+                if (sortiranje === "low-to-high") {
+                    return cijenaA - cijenaB;
+                } else {
+                    return cijenaB - cijenaA;
+                }
+            });
+
+            while (kontejner.firstChild) {
+                kontejner.removeChild(kontejner.firstChild);
+            }
+
+            proizvodi.forEach((proizvod) => {
+                kontejner.appendChild(proizvod);
+            });
+        }
+
+        document.getElementById("sortSelect").addEventListener("change", function () {
+            const odabranoSortiranje = this.value;
+            if (odabranoSortiranje === "low-to-high" || odabranoSortiranje === "high-to-low") {
+                sortirajProizvode(odabranoSortiranje);
+            }
+        });
+    </script>
+ 
+</div>
+
+      <!---------- brands ------>
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="images/robot-removebg-preview.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/bingo-removebg-preview.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-coca-cola.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-paypal.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-philips.png">
+                </div>
+                <div class="col-5">
+                    <img src="images/konzum-removebg-preview.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------- footer ------->
+    <footer>
+        <p50>&copy; 2023 Copyright. Sva prava zadržana.</p>
+    </footer>
+</body>
+</html>
